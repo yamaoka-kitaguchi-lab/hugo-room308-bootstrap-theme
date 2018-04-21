@@ -1,0 +1,32 @@
+<div class="jumbotron jumbotron-main bg-transparent">
+  <div id="particles-js"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <h1> 山岡・北口研究室</h1>
+        <p>東京工業大学 工学院情報通信系</p>
+        <p><a class="btn btn-primary btn-lg jumbotron-btn bg-transparent no-transition" role="button" href="/welcome/index.html"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>入学希望の方へ</a></p>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-4">
+        <ul class="list-group news-headline-list">
+          {{ range first 20 (where .Data.Pages "Section" "news") }}
+            <li class="list-group-item news-headline btn btn-primary" role="button"><a href="/news/index.html#{{ .UniqueID }}" class="normal-link"><i class="news-headline-date">{{ .Date.Format "06.01.02" }}</i>{{ .Title }}</li></a>
+          {{ end }}
+        </ul>
+        <div class="show-all-news">
+          <a href="news/index.html"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>すべてのニュースを見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <section>
+        {{ .Content }}
+      </section>
+    </div>
+  </div>
+</div>
