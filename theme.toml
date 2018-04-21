@@ -2,10 +2,8 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "room308-bootstrap"
-license = "MIT"
-licenselink = "https://github.com/yamaoka-kitaguchi-lab/hugo-room308-bootstrap-theme/blob/master/LICENSE"
-description = "based on bootstrap"
-homepage = "https://yamaoka-kitaguchi-lab.github.io/"
+description = "Based on Bootstrap/Honoka"
+homepage = "https://www.net.ict.e.titech.ac.jp/"
 tags = []
 features = []
 min_version = "0.31.1"
