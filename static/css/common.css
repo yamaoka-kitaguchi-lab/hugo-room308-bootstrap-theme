@@ -114,10 +114,3 @@ table tbody tr:hover {
 .commithash:hover {
   text-decoration: underline;
 }
-
-.copyright {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-align: center;
-}
