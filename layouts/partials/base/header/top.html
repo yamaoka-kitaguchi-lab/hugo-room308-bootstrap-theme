@@ -1,23 +1,37 @@
-<header id="header">
-  <nav id="navigationbar" class="navbar navbar-default navbar-fixed-top bg-transparent">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand no-padding" href="/"><img id="lab-logo-black" src="/image/lab-logo-black.png" alt="LAB-LOGO" style="display: none;"><img id="lab-logo-white" src="/image/lab-logo-white.png" alt="LAB-LOGO" style="display: none;"></a>
-        <button id="navbar-toggle-btn" type="button" class="navbar-toggle navbar-transparent" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div id="navbar-main" class="collapse navbar-collapse navbar-right" aria-expanded="false">
-        <ul class="nav navbar-nav">
-          <li><a class="navbar-link navbar-link-transparent" href="/research/index.html">研究領域</a></li>
-          <li><a class="navbar-link navbar-link-transparent" href="/members/index.html">メンバー</a></li>
-          <li><a class="navbar-link navbar-link-transparent" href="/publications/index.html">業績</a></li>
-          <li><a class="navbar-link navbar-link-transparent hidden-md hidden-lg" href="/news/index.html">ニュース</a></li>
-          <li><a class="navbar-link navbar-link-transparent" href="/access/index.html">アクセス</a></li>
+<header>
+  <nav class="navbar navbar-dark fixed-top navbar-expand-md px-0 py-2 bg-transparent">
+    <div class="container p-0">
+      <!-- Brand -->
+      <a class="navbar-brand p-0 m-0" href="/">
+        <img id="lab-logo-black" class="m-0" src="/image/lab-logo-black.png" alt="LAB-LOGO" style="display: none;">
+        <img id="lab-logo-white" class="m-0" src="/image/lab-logo-white.png" alt="LAB-LOGO" style="display: none;">
+      </a>
+
+      <!-- Toggler/collapsibe Button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto fg-white">
+          <li class="nav-item">
+            <a class="nav-link" href="/research/index.html">研究領域</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/members/index.html">メンバー</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/publications/index.html">業績</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-lg-none" href="/news/index.html">ニュース</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/access/index.html">アクセス</a>
+          </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </header>
