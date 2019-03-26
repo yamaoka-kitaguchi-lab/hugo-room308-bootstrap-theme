@@ -3,6 +3,21 @@
   font-weight: 300;
 }
 
+.spacemono {
+  font-family: 'Space Mono', monospace;
+  font-weight: 200;
+}
+
+.plexmono {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 200;
+}
+
+.overpassmono {
+  font-family: 'Overpass Mono', monospace;
+  font-weight: 200;
+}
+
 body {
   margin-top: 80px;
 }

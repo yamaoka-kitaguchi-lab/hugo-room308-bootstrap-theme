@@ -3,7 +3,6 @@
      <div class="col-12">
        <section>
          <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span>メンバー</h1>
-         {{ .Content }}
          <small class="info"><span class="glyphicon glyphicon-info-sign"></span>情報が更新されない場合はブラウザの強制再読み込み (スーパーリロード) を試してください．</small>
          <div id="erroralert">
            <div class="alert alert-warning">
@@ -13,6 +12,11 @@
          </div>
          <div id="members"></div>
          <div id="pastmembers"></div>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-12">
+       {{ .Content }}
      </div>
    </div>
 </div>
