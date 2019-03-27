@@ -8,7 +8,7 @@
         {{ $lastevent := (index .Data.Pages 0) }}
         {{ $year := seq ($lastevent.Date.Format "2006") -1 2017 }}
         {{ range $index, $dot := $dot.Data.Pages.GroupByDate "2006" }}
-        <h2 class="mb-3 border-0 p-0"><i class="fas fa-calendar-alt pr-2"></i>{{ index $year $index }}年<span class="badge badge-pill badge-secondary event-badge ml-2">{{ len $dot.Pages }}件のイベント</span></h2>
+        <h2 class="mb-3 border-0 p-0 align-middle"><i class="fas fa-calendar-alt pr-2"></i>{{ index $year $index }}年<span class="badge badge-pill badge-secondary event-badge ml-2 align-middle">{{ len $dot.Pages }}件のイベント</span></h2>
         <ul class="p-0">
           {{ range $dot.Pages }}
           {{ $color := .Params.color }}
@@ -38,7 +38,7 @@
                 {{ end }}
               </div>
             </div>
-            <div class="card-body event-item-body mb-2 p-2 pl-3 bg-white">
+            <div class="card-body event-item-body mb-0 p-2 pl-3 bg-white">
               {{ .Content }}
             </div>
           </div>

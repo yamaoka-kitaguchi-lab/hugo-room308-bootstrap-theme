@@ -48,6 +48,7 @@ button.navbar-toggler.navbar-transparent > .icon-bar {
 
 .welcome-btn {
   border: 1px solid var(--white);
+  font-weight: 300;
   color: var(--white);
 }
 
