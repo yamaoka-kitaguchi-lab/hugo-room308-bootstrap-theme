@@ -1,10 +1,10 @@
 {{ $message := .Get 0 }}
 
-<div class="row">
+<div class="row mb-2">
   <div class="container">
     <div class="alert alert-success alert-dismissible">
       <button class="close" type="button" data-dismiss="alert">×</button>
-      <strong><span class="glyphicon glyphicon-cog"></span>メンテナンス中: </strong>
+      <strong><i class="fas fa-cogs pr-2"></i>メンテナンス中: </strong>
       {{ $message }}
     </div>
   </div>

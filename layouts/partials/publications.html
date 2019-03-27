@@ -2,13 +2,13 @@
   <div class="row">
     <div class="col-12">
       <section>
-        <h1><span class="glyphicon glyphicon-king" aria-hidden="true"></span>業績</h1>
+        <h1><i class="fas fa-trophy pr-2"></i>業績</h1>
+        <small class="info"><i class="fas fa-info-circle pr-2"></i>情報が更新されない場合はブラウザの強制再読み込み (スーパーリロード) を試してください</small>
         {{ .Content }}
-        <small class="info"><span class="glyphicon glyphicon-info-sign"></span>情報が更新されない場合はブラウザの強制再読み込み (スーパーリロード) を試してください．</small>
         <div id="erroralert">
-          <div class="alert alert-warning">
-            <h4><span class="glyphicon glyphicon-remove"></span>業績リストのビルドができません</h4>
-            <p>お使いのブラウザでJavascriptの実行が許可されているか確認してください．あるいはGitHubリポジトリ <a href="https://github.com/yamaoka-kitaguchi-lab/publications">yamaoka-kitaguchi-lab/publications</a> を直接参照してください．</p>
+          <div class="alert alert-danger">
+            <h4><i class="fas fa-bomb pr-2"></i>業績リストのビルドができません</h4>
+            <p class="mb-0">お使いのブラウザでJavascriptの実行が許可されているか確認してください．<br>あるいはGitHubリポジトリ <a href="https://github.com/yamaoka-kitaguchi-lab/publications">yamaoka-kitaguchi-lab/publications</a> を直接参照してください．</p>
           </div>
         </div>
         <div id="publications"></div>

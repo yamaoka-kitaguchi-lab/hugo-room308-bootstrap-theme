@@ -177,12 +177,12 @@ $(document).ready(() => {
       $("#erroralert")
         .append($('<div class="alert alert-danger">')
           .append($('<h4>')
-            .append($('<span class="glyphicon glyphicon-fire">'))
+            .append($('<i class="fas fa-fire pr-2"></i>'))
             .append(title)
             .append($('<strong>').text(cause)))
-          .append($('<p>')
+          .append($('<p class="mb-0">')
             .append($('<a href="' + url + '">').text(filename))
-            .append(" に問題があります．GitHubリポジトリ ")
+            .append(" に問題があります．<br>GitHubリポジトリ ")
             .append($('<a href="' + repository + '">').text("yamaoka-kitaguchi-lab/members"))
             .append(" を確認してください．")));
       console.error(error);
