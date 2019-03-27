@@ -2,56 +2,43 @@
   <div class="row">
     <div class="col-12">
       <section>
-        <h1><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>ニュース</h1>
+        <h1><i class="fas fa-broadcast-tower pr-2"></i>ニュース</h1>
         {{ .Content }}
         {{ $dot := . }}
         {{ $lastevent := (index .Data.Pages 0) }}
         {{ $year := seq ($lastevent.Date.Format "2006") -1 2017 }}
         {{ range $index, $dot := $dot.Data.Pages.GroupByDate "2006" }}
-        <h2><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>{{ index $year $index }}年<span class="badge event-badge">{{ len $dot.Pages }}件のイベント</span></h2>
-        <ul class="event-item-list">
+        <h2 class="mb-3 border-0 p-0"><i class="fas fa-calendar-alt pr-2"></i>{{ index $year $index }}年<span class="badge badge-pill badge-secondary event-badge ml-2">{{ len $dot.Pages }}件のイベント</span></h2>
+        <ul class="p-0">
           {{ range $dot.Pages }}
           {{ $color := .Params.color }}
-          {{ if eq $color "gray" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-gray panel">
-          {{ else if eq $color "blue" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-blue panel">
-          {{ else if eq $color "light-blue" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-light-blue panel">
-          {{ else if eq $color "dark-blue" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-dark-blue panel">
-          {{ else if eq $color "green" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-green panel">
-          {{ else if eq $color "light-green" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-light-green panel">
-          {{ else if eq $color "dark-green" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-dark-green panel">
-          {{ else if eq $color "yellow" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-yellow panel">
-          {{ else if eq $color "light-yellow" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-light-yellow panel">
-          {{ else if eq $color "dark-yellow" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-dark-yellow panel">
-          {{ else if eq $color "gray" }}
-          <div id="{{ .UniqueID }}" class="event-item event-item-gray panel">
+          {{ if eq $color "" }}
+          <div id="{{ .UniqueID }}" class="mb-2 event-item card">
           {{ else }}
-          <div id="{{ .UniqueID }}" class="event-item panel">
+          <div id="{{ .UniqueID }}" class="mb-2 event-item event-item-{{ $color }} card">
           {{ end }}
-            <div class="panel-heading event-item-heading">
-              <p class="event-item-title">{{ .Title }}</p>
+            <div class="card-head event-item-heading mb-0 p-2 pl-3">
+              <p class="event-item-title mb-0">{{ .Title }}</p>
               <div class="event-item-meta">
-                <p class="event-item-meta-date">
-                  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>{{ .Date.Format "2006年1月2日" }}{{ with .Params.till }} から {{ dateFormat "2006年1月2日" . }} まで{{ end }}
+                <p class="event-item-meta-date d-inline-block mb-0 pr-2">
+                  <i class="far fa-clock"></i>
+                  {{ .Date.Format "2006年1月2日" }}{{ with .Params.till }} から {{ dateFormat "2006年1月2日" . }} まで{{ end }}
                 </p>
                 {{ with .Params.achievement }}
-                  <p class="event-item-meta-tag"><span class="glyphicon glyphicon-certificate" aria-hidden="true"></span> {{ . }}</p>
+                  <p class="event-item-meta-tag d-inline-block mb-0 pr-2">
+                    <i class="fas fa-certificate"></i>
+                    {{ . }}
+                  </p>
                 {{ end }}
                 {{ with .Params.location }}
-                  <p class="event-item-meta-tag"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ . }}</p>
+                  <p class="event-item-meta-tag d-inline-block mb-0 pr-2">
+                    <i class="fas fa-map-marker-alt"></i>
+                    {{ . }}
+                  </p>
                 {{ end }}
               </div>
             </div>
-            <div class="panel-body event-item-body">
+            <div class="card-body event-item-body mb-2 p-2 pl-3 bg-white">
               {{ .Content }}
             </div>
           </div>
