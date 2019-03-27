@@ -1,3 +1,7 @@
+:root {
+  --theme-white: #f8f9fa;
+}
+
 * {
   font-family: 'M PLUS 1p', sans-serif;
   font-weight: 300;
@@ -5,7 +9,11 @@
 
 body {
   margin-top: 80px;
-  background-color: #f8f9fa;
+  background-color: var(--theme-white);
+}
+
+.bg-theme-white {
+  background-color: var(--theme-white);
 }
 
 .spacemono {
@@ -69,7 +77,7 @@ mark.blue {
 }
 
 a, .btn {
-  transition-property: none;
+  transition-property: none !important;
 }
 
 .navbar-brand img {
@@ -94,29 +102,13 @@ a, .btn {
   text-decoration: none;
 }
 
-table > thead > tr > th, table > tbody > tr > td {
+table > thead > tr > th,
+table > tbody > tr > td {
   white-space: nowrap;
 }
 
 table tbody tr:hover {
   background-color: #f5f5f5;
-}
-
-.panel {
-  border-radius: 5px 5px 5px 5px;
-  border: none;
-}
-
-.panel p {
-  margin: 0;
-}
-
-.panel-heading {
-  border-radius: 5px 5px 0 0;
-}
-
-.panel-body {
-  border-radius: 0 0 5px 5px;
 }
 
 .footer-link {

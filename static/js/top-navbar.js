@@ -7,14 +7,14 @@ const navbar = (mode) => {
       $("#lab-logo-black").hide();
       $("#lab-logo-white").show();
       $("nav").removeClass("bg-transparent").removeClass("navbar-dark");
-      $("nav").addClass("bg-white").addClass("navbar-light");
+      $("nav").addClass("bg-theme-white").addClass("navbar-light");
       $("button.navbar-toggler").removeClass("navbar-transparent");
       $(".nav-link").removeClass("navbar-link-transparent").addClass("text-dark");
       break;
     case BLACK:
       $("#lab-logo-white").hide();
       $("#lab-logo-black").show();
-      $("nav").removeClass("bg-white").removeClass("navbar-light");
+      $("nav").removeClass("bg-theme-white").removeClass("navbar-light");
       $("nav").addClass("bg-transparent").addClass("navbar-dark");
       $("button.navbar-toggler").addClass("navbar-transparent");
       $(".nav-link").addClass("navbar-link-transparent").removeClass("text-dark");

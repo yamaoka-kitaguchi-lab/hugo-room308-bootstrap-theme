@@ -9,17 +9,13 @@ body {
   margin-top: 0;
 }
 
-.navbar-nav .nav-link {
-  font-weight: 400;
-}
-
 .navbar-dark .navbar-nav .navbar-link-transparent {
-  color: var(--white);
+  color: var(--gray) !important;
 }
 
 .navbar-dark .navbar-nav .navbar-link-transparent:hover,
 .navbar-dark .navbar-nav .navbar-link-transparent:focus {
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
