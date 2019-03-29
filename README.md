@@ -1,4 +1,7 @@
 # hugo-room308-bootstrap-theme
+
+![](https://raw.githubusercontent.com/yamaoka-kitaguchi-lab/hugo-room308-bootstrap-theme/screenshot/v2.0.0.png)
+
 研究室Webサイトで使用している[Hugo](https://gohugo.io/)オリジナルテーマです．
 
 - Bootstrap4
