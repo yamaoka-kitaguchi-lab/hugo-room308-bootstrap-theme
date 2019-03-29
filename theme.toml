@@ -2,7 +2,7 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "room308-bootstrap"
-description = "Based on Bootstrap/Honoka"
+description = "bootstrap4"
 homepage = "https://www.net.ict.e.titech.ac.jp/"
 tags = []
 features = []
