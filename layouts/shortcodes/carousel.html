@@ -1,0 +1,38 @@
+{{ $slides := $.Page.Resources.Match "slide*" }}
+{{ $carouselId := .Get "id" }}
+
+<div class="row justify-content-center">
+  <div id="{{ $carouselId }}" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      {{ range $key, $value := $slides }}
+        {{ $active := "" }}
+        {{- if eq $key 0 }} {{ $active = "active" }} {{- end }}
+        <li data-target="#{{ $carouselId }}" data-slide-to="{{ $key }}" class="d-none d-sm-block {{ $active }}"></li>
+      {{ end }}
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner" role="listbox">
+      {{ range $key, $value := $slides }}
+        {{ $active := "" }}
+        {{- if eq $key 0 }} {{ $active = "active" }} {{- end }}
+        <div class="carousel-item {{ $active }}">
+          <img src="{{ .RelPermalink }}" class="d-block img-responsive w-100">
+          <div class="carousel-caption d-none d-md-block">
+            <div class="mark p-2">
+              <h5 class="m-0">{{ .Title }}</h5>
+              {{- with .Params.description }}<p class="m-0 mt-2">{{ . }}</p>{{- end}}
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#{{ $carouselId }}" role="button" data-slide="prev">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next" href="#{{ $carouselId }}" role="button" data-slide="next">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+</div>
