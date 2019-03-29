@@ -6,3 +6,9 @@ span.badge {
   font-size: 85% !important;
   padding: 5px;
 }
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: block !important;
+  }
+}
