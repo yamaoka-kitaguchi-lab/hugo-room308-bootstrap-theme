@@ -3,9 +3,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-8 my-auto">
-        <h1 class="text-light display-3 d-none d-md-block"> 山岡・北口研究室</h1>
-        <h1 class="text-light display-4 d-none d-sm-block d-md-none"> 山岡・北口研究室</h1>
-        <h1 class="text-light display-5 d-block d-sm-none"> 山岡・北口研究室</h1>
+        <h1 class="text-light display-3 d-none d-md-block"> 山岡研究室</h1>
+        <h1 class="text-light display-4 d-none d-sm-block d-md-none"> 山岡研究室</h1>
+        <h1 class="text-light display-5 d-block d-sm-none"> 山岡研究室</h1>
         <p class="lead text-light">東京工業大学 工学院情報通信系</p>
         <p>
           <a class="btn btn-lg btn-outline-primary welcome-btn" role="button" href="/welcome/index.html">
@@ -17,14 +17,14 @@
       <div class="d-none d-lg-block col-lg-4">
         <ul class="list-group" id="news-headline-list">
           {{ range first 20 (where .Data.Pages "Section" "news") }}
-            <li class="list-group-item news-headline btn btn-primary" role="button">
-              <div class="text-truncate">
-                <a href="/news/index.html#{{ .UniqueID }}" class="normal-link">
-                  <i class="news-headline-date">{{ .Date.Format "06.01.02" }}</i>
-                  {{ .Title }}
-                </a>
-              </div>
-            </li>
+          <li class="list-group-item news-headline btn btn-primary" role="button">
+            <div class="text-truncate">
+              <a href="/news/index.html#{{ .UniqueID }}" class="normal-link">
+                <i class="news-headline-date">{{ .Date.Format "06.01.02" }}</i>
+                {{ .Title }}
+              </a>
+            </div>
+          </li>
           {{ end }}
         </ul>
         <div id="show-all-news" class="text-right p-0 m-0">
